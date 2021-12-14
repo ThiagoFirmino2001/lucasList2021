@@ -3,7 +3,14 @@
  -----------------------
 Ex00: Criar arquivo de exercício
 DIRETÓRIO DE ENTREGA: ex00
-> Dentro do diretório de entrega, crie um arquuivo chamado list_01.txt
+> Dentro do diretório de entrega, crie um arquivo chamado list_01.txt
 > escreva dentro dele o seguinte texto:
-"Skills Aquired: mkdir\cd\touch\
-
+"
+Skills Aquired: mkdir\cd\touch\cat\<etc>
+list_00 complete;
+list_01 complete;
+"
+> volte para o repositório listLucas
+> utilize os comandos
+> git status, git add, git commit, git push para dar push nos arquivos da pasta;
+> o comentario será "completo";
