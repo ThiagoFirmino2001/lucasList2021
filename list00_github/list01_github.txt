@@ -1,0 +1,9 @@
+ -----------------------
+|	List 01		|
+ -----------------------
+Ex00: Criar arquivo de exercício
+DIRETÓRIO DE ENTREGA: ex00
+> Dentro do diretório de entrega, crie um arquuivo chamado list_01.txt
+> escreva dentro dele o seguinte texto:
+"Skills Aquired: mkdir\cd\touch\
+

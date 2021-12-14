@@ -1,0 +1,58 @@
+ -----------------------
+|	LISTA 00	|
+ -----------------------
+Ex00: CRIAR UMA CONTA NA GITHUB.COM
+
+ao criar, siga está conta "https://github.com/ThiagoFirmino2001".
+Aguarde intruções para a segunda Fase.
+---------------------------------------------------------------
+Ex01: CRIAR CHAVE SSH
+
+A chave ssh é a chave que cria uma ligação entre o seu dispositivo (pc, cel, servidor, ...)
+e te permite controlar as pastas e repositórios usando seu dispositivo:
+
+I. Verificando se você já possui uma conexão SSH:
+> A conexão SSH é encarnada em forma de um DIRETÓRIO, e esse diretório é oculto ('.'no inicio do nome), logo, para descobrir se vc tem uma conexão SSH, use o comando de listagem (ls) e especifique que é oculto ('.'no incio do nome).
+$ ls -al ~/.ssh
+
+* se você tiver uma, vai mostrar a listagem dela, se você não tiver, vai acusar que você não possui tal pasta.
+
+II. Gerando a chave ssh:
+> no seu terminal use o comando:
+$ ssh-keygen -t ed25519 -C your_email@example.com
+> Irá pedir para você escolher o diretório em que irá instalar.
+> por padrão ele indica a raiz então apenas aperte enter;
+> irá pedir para que você digite uma senha dessa chave:
+> (ao digitar, não irá aparecer nada, mas ela sera inserida mesmo assim);
+> repita a mesma senha na próxima linha (se você não digitar nada e apertar 'enter', significa que sua senha não é nada, só o 'enter');
+
+* ssh-keygen vai gerar a sua chave;
+* '-t' vai especificar o tipo de chave (existem as chaves "id_rsa", "id_ecdsa" e "id_ed25519");
+* '-C' irá configurar o seu e-mail para a chave.
+
+III. Adicionar chave privada no ssh-agent:
+> no seu terminal use o comando:
+>$ eval $(ssh-agent -s)
+
+IV. Incluir a chave privada:
+> no seu terminal ENTRE no DIRETÓRIO '.ssh'; 
+> no diretório .ssh/ digite o comando;
+>$ ssh-add id_ed25519
+
+V. Copiar chave pública:
+> A chave publica dessa mesma chave fica no 'is_ed25519.pub', para copiar ela você deve mostrar seu conteúdo;
+>$ cat id_ed25519.pub
+> copie o que mostrar desde o ssh ate seu email;
+
+VI. Cole essa chave no seu perfil do GitHub 
+>(settings/SSH and GPG keys/New SSH Key)
+>cole essa chave lá, dé um nome a ela e gere a nova chave
+
+VII. Testando a conexão SSH;
+> no seu terminal digite:
+>$ ssh -T git@github.com
+----------------------------------------------------------------------------------------
+Dentro do repositório .ssh/ digite o seguinte comando:
+> $ git clone git@github.com:ThiagoFirmino2001/lucasList2021.git
+------------------------------------------------------------------------------
+Fim da lista 00.
