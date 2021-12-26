@@ -1,0 +1,4 @@
+Skills Aquired: mkdir\cd\touch\cat\<etc>
+list_00 complete;
+list_01 complete;
+
