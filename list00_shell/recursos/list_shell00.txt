@@ -1,0 +1,167 @@
+ -----------------------
+|	Shell 00	|
+ -----------------------
+
+=CONTEÚDO=
+
+Exercício 00 : Z
+Exercício 01 : testShell00
+Exercício 02 : Sim, de novo…
+Exercício 03 : midLS
+Exercício 04 : GiT commit
+Exercício 05 : gitignore
+Exercício 06 : diff
+Exercício 07 : clean
+Exercício 08 : Ilusões, não truques, Michael...
+-----------------------------------------------
+=INSTRUÇÕES=
+• Releia bem o tema antes de entregar seus exercícios.
+• Os exercícios são ordenados precisamente do mais simples ao mais complexo.
+• Atenção aos direitos de seus arquivos e suas pastas.
+• Você deverá seguir o procedimento de entrega para todos os exercícios.
+• Os exercícios shell devem ser executados com /bin/sh.
+• Você não deve deixar em sua pasta nenhum outro arquivo além daqueles explicitamente especificados pelos enunciados dos exercícios.
+• Você tem alguma dúvida? Seu manual de referência chama-se Google / man / Internet / ....
+• Considere discutir no fórum.
+• Leia atentamente os exemplos. Eles podem exigir coisas que não ficaram bem especificadas no tema…
+-----------------------------------------------
+=Exercício 00 : Z=
+'Os sábios sabem vizualizar um Z'
+[]Pasta de entrega : ex00/
+[]Arquivos para entregar : z
+
+• Crie um arquivo z que, quando se faz um cat acima, exiba um "Z", seguido de uma quebra de linha.
+
+>cat z
+>Z 
+>
+-----------------------------------------------
+=Exercício 01 : testShell00=
+'O que são os atributos'
+[]Pasta de entrega : ex01/
+[]Arquivos para entregar : testShell00.tar
+
+• Crie o arquivo testShell00 em sua pasta de entrega.
+• Você deve garantir que, ao usar o comando ls -l, ele fique dessa forma:
+>ls -l
+>total XX 
+>-r--r-xr-x 1 XX XX 40 Jun 1 23:42 testShell00 
+>
+(Em relação às horas, será tolerado que o ano seja exibido se a data do exercício (1º de junho) for de seis meses antes ou mais antiga.)
+
+(<!> Os XX não serão considerados.)
+
+(<!> Um ano é uma resposta aceita em vez de um horário.)
+
+Após resolver o exercício, execute o comando 
+>tar -cf testShell00.tar testShell00 
+para criar o arquivo que será entregue.
+-----------------------------------------------
+=Exercício 02 : Sim, de novo…=
+'Sim, de novo…"
+[]Pasta de entrega : ex02/
+[]Arquivos para entregar : exo2.tar
+
+• Crie todos estes arquivos e pastas. Faça o que for necessário para que a visualização de um ls -l em sua pasta fique da seguinte forma:
+
+> ls -l
+>total XX
+>drwx--xr-x 2 XX XXXX Jun 1 20:47 test0
+>-rwx--xr-- 1 XX XX 4 Jun 1 21:46 test1
+>dr-x---r-- 2 XX XXXX Jun 1 22:45 test2
+>-r-----r-- 2 XX XX 1 Jun 1 23:44 test3
+>-rw-r----x 1 XX XX 2 Jun 1 23:43 test4
+>-r-----r-- 2 XX XX 1 Jun 1 23:44 test5
+>lXXXXXXXXX 1 XX XX 5 Jun 1 22:20 test6 -> test0
+>
+
+(Em relação às horas, será tolerado que o ano seja exibido se a data do exercício (1º de junho) for de seis meses antes ou mais antiga.)
+
+(<!> Os XX não serão considerados.)
+
+(<!> Um ano é uma resposta aceita em vez de um horário.)
+
+• Após resolver o exercício, execute o comando
+>tar -cf exo2.tar * 
+para criar o arquivo que será entregue.
+-----------------------------------------------
+=Exercício 03 : midLS=
+'midLS'
+[]Pasta de entrega : ex03/
+[]Arquivos para entregar : midLS
+
+• Coloque em um arquivo midLS a linha de comando a se digitar para listar os arquivos e as pastas da pasta atual, mas não os arquivos ocultos, nem "." ou ".." (nada que comece com um ponto). Separe-os por vírgulas, ordene por data de acesso e de maneira que as pastas sejam seguidas por uma barra.
+
+(<!> O que não é pedido, não é para ser feito!)
+
+(Dica: RTFM!)
+-----------------------------------------------
+=Exercício 04 : GiT commit=
+'GIT commit?'
+[]Pasta de entrega : ex04/
+[]Arquivos para entregar : git_commit.sh
+
+• Crie um programa shell que retorne os id dos 5 últimos commit do seu repositório git.
+
+> bash git_commit.sh | cat -e
+baa23b54f0adb7bf42623d6d0a6ed4587e11412a$
+2f52d74b1387fa80eea844969e8dc5483b531ac1$
+905f53d98656771334f53f59bb984fc29774701f$
+5ddc8474f4f15b3fcb72d08fcb333e19c3a27078$
+e94d0b448c03ec633f16d84d63beaef9ae7e7be8$
+>
+
+(Dica: RTFM!)
+-----------------------------------------------
+=Exercício 05 : gitignore=
+'GiT'
+[]Pasta de entrega : ex05/
+[]Arquivos para entregar : git_ignore.sh
+
+• Escreva um shell script curto que retornará a lista de arquivos existentes atualmente no seu repositório local, ignorados pelo seu repositório git.
+Exemplo:
+
+>bash git_ignore.sh | cat -e
+>.DS_Store$
+>mywork.c$
+>
+
+(Dica: RTFM!)
+-----------------------------------------------
+=Exercício 06 : diff=
+[]Pasta de entrega : ex06/
+[]Arquivos para entregar : b
+
+• Criar o arquivo b conforme:
+>cat -e a 
+>STARWARS$
+>Episode IV, A NEW HOPE It is a period of civil war.$
+>$
+>Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.$
+>During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR,$
+>an armored space station with enough power to destroy an entire planet.$
+>$
+>Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...$
+>$
+>diff a b > sw.diff
+
+(Dica: man patch)
+-----------------------------------------------
+=Exercício 07 : clean=
+[]Pasta de entrega : ex07/
+[]Arquivos para entregar : clean
+
+• Coloque dentro de um arquivo clean, uma linha de comando que vai procurar, a partir da pasta atual e dentro de todas as suas subpastas, os arquivos cujos nomes terminam com ~, ou comecem e terminem com #.
+• A linha de comando deve exibir e excluir os arquivos encontrados.
+• Somente um comando é autorizado: nada de ’;’ ou ’&&’ ou outro comando.
+
+(Dica: man find)
+-----------------------------------------------
+=Exercício 08 : Ilusões, não truques, Michael...=
+'Illusões, não truques, Michael…'
+[]Pasta de entrega : ex08/
+[]Arquivos para entregar : ft_magic
+
+• Crie um arquivo mágico nomeado ft_magic que deverá ser corretamente formatado para detectar os arquivos de tipo 42 file e constituído pela String "42" ao 42º byte.
+
+(Dica: man file)
